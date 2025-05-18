@@ -6,10 +6,6 @@ const loginPage = new LoginPage();
 const basePage = new BasePage();
 
 describe("Login Verification @Smoke", () => {
-  beforeEach(() => {
-    cy.visit(Cypress.env("APP_BASE_URL"));
-  });
-
   it("TG11S-T131 - Validate login with valid credentials", () => {
     loginPage.login(Cypress.env("USERNAME"), Cypress.env("PASSWORD"));
 
