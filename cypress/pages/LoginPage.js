@@ -32,9 +32,12 @@ export default class LoginPage {
     this.getLoginButton().click();
   }
 
-  login(username, password) {
+  login(username, password, click = true) {
     this.enterUsername(username);
-    this.enterPassword(password);
-    this.clickOnLoginButton();
+    if(click) {
+      this.enterPassword(password);
+      this.clickOnLoginButton();
+    }
+    else this.getPasswordInput().type(`${password}{enter}`);
   }
 }
