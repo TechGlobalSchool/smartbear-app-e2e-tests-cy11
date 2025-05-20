@@ -15,6 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+const registerCypressGrep = require('@cypress/grep')
+registerCypressGrep()
 
 beforeEach(() => {
   cy.visit(Cypress.env("APP_BASE_URL"));
