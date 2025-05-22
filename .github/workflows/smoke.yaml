@@ -8,6 +8,10 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    env:
+      APP_BASE_URL: ${{ env.APP_BASE_URL }}
+      USERNAME: ${{ env.USERNAME }}
+      PASSWORD: ${{ env.PASSWORD }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
